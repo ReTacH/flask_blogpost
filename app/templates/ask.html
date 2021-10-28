@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+
 {% block header %}
   <h1>{% block title %}Ask{% endblock %}</h1>
 {% endblock %}
@@ -18,8 +20,7 @@
   {% if name %}
   <br>
   {% if student == "yes" %}
-  <b>Hello {{name}}! </b>
-  Click <a href="/profile/{{name}}">here</a> to go to a customized page just for you!
+  <b>Hello {{name}}!  Do you like PIC16B?</b>
   {% else %}
   <b>Hello {{name}}!  Do you want to take PIC16B?</b>
   {% endif %}
