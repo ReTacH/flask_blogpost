@@ -2,9 +2,9 @@ from flask import Flask, g, render_template, request, current_app
 import sqlite3
 app = Flask(__name__)
 
-def getmessage():
+def get_message_db():
 	if 'message_db' not in g:
-    	    g.message_db = sqlite3.connect('message_db.sqlite')
+		g.message_db = sqlite3.connect('message_db.sqlite')
 
 	with current_app.open_resource('init.sql') as f:
 		g.message_db.executescript(f.read().decode('utf8'))
@@ -29,7 +29,6 @@ def random_messages(n):
 	rdm_message = db.execute(
 		f'SELECT handle, message FROM messages ORDER BY RANDOM() LIMIT {n}'
 		).fetchall()
-
 	return rdm_message
 
 
@@ -50,4 +49,6 @@ def submit():
 
 @app.route('/view/')
 def view():
-    return render_template('view.html', messages = rdm_message)
+	rdm = random_messages(5)
+    
+	return render_template('view.html', messages = rdm)
