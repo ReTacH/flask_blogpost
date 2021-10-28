@@ -1,6 +1,6 @@
 html {
     font-family: monospace;
-    background: rgb(26, 15, 0);
+    background: rgba(0, 0, 0, 0.856);
     padding: 1rem;
 }
 
@@ -10,15 +10,46 @@ body {
 }
 
 h1 {
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 25px;
+    background-color: rgb(138, 65, 65);
+}
+
+li {
+    color:rgb(255, 253, 253);
     font-family: monospace;
     margin: 1rem 0;
     text-align: center;
+    font-size: 12px;
+}
+
+p {
+    color:rgb(255, 253, 253);
+    font-family: monospace;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+label {
+    color:rgb(253, 253, 253);
+    font-family: monospace;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 15px;
 }
 
 a {
-    color: rgb(237, 100, 100);
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    font-size: 15px;
+}
+
+form {
+    text-align: center;
 }
 
 hr {
@@ -27,9 +58,9 @@ hr {
 }
 
 nav {
-    background: rgb(0, 0, 0);
-    padding: 0 0.5rem;
-    border-radius: 25px;
+    background: rgb(138, 65, 65);
+    padding: 1.5 0.5rem;
+    border-radius: 20px;
 }
 
 nav ul  {
@@ -41,13 +72,13 @@ nav ul  {
 
 nav ul li a {
     display: block;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 .content {
     padding: 0 1rem 1rem;
-    background: rgb(70, 65, 65);
-    border-radius: 25px;
+    background: rgb(78, 77, 77);
+    border-radius: 20px;
 }
 
 .flash {
